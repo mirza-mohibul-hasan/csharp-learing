@@ -1,36 +1,73 @@
 ﻿/* 
-    Varibale and Data Types
-    - Variables are used to store data
-    - Data types are used to define the type of data that a variable can store
-    -int - stores integers (whole numbers), without decimals, such as 123 or -123
-    - double - stores floating point numbers, with decimals, such as 19.99 or -19.99
-    - char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
-    - string - stores text, such as "Hello World". String values are surrounded by double quotes
-    - bool - stores values with two states: true or false
-
-    Variuable Naming Rules:
-    - Variable names are case-sensitive (name and Name are different variables)
-    - Variable names must start with a letter or an underscore
-    - Variable names can only contain letters, numbers, and underscores
-    - Variable names cannot contain whitespaces. If you need a space, use an underscore (_)
-    - Variable names cannot be a C# keyword. For example, int, double, string etc.
-    - Can not  start with a number. For example, 1name is invalid
-    - Can not contain special characters except underscore(_). For example, @, #, $, % etc.
+    Type Casting
+    1. Implicit Type Casting
+        a. It is also known as Widening Conversion
+        b. It is done automatically by the compiler
+        c. It is also known as Upcasting
+        d. It is done when the target type is larger than the source type
+        e. e.g. char -> int -> long -> float -> double
+    2. Explicit Type Casting
+        a. It is also known as Narrowing Conversion
+        b. It is done manually by the programmer
+        c. It is also known as Downcasting
+        d. It is done when the target type is smaller than the source type
+        e. e.g. double -> float -> long -> int -> char
+    3. Type Conversion
+        a. It is the process of converting the value of one data type to another data type
+        b. It is also known as Type Casting
+        c. It is of two types
+            i. Implicit Type Conversion
+            ii. Explicit Type Conversion
+    4. Parse Method
+        a. It is used to convert a string into an integer
+        b. It is a static method
+        c. It is a part of the int class
+        d. It throws an exception if the conversion fails
+    5. TryParse Method
+        a. It is used to convert a string into an integer
+        b. It is a static method
+        c. It is a part of the int class
+        d. It does not throw an exception if the conversion fails
+        e. It returns a boolean value
 */
-class Variables
+
+using System;
+
+class Test
 {
     public static void Main(string[] args)
     {
-        int myNum = 5;               // Integer (whole number)
-        double myDoubleNum = 5.99D;  // Floating point number
-        char myLetter = 'D';         // Character
-        bool myBool = true;          // Boolean
-        string myText = "Hello";     // String
+        // Implicit Type Casting
+        int num = 100;
+        float f = num;
+        Console.WriteLine(f);
 
-        Console.WriteLine(myNum);
-        Console.WriteLine(myDoubleNum);
-        Console.WriteLine(myLetter);
-        Console.WriteLine(myBool);
-        Console.WriteLine(myText);
+        // Explicit Type Casting
+        float f1 = 123.45F;
+        int num1 = (int)f1;
+        Console.WriteLine(num1);
+
+        // Type Conversion
+        int num2 = 100;
+        string str = num2.ToString();
+        Console.WriteLine(str);
+
+        // Parse Method
+        string str1 = "100";
+        int num3 = int.Parse(str1);
+        Console.WriteLine(num3);
+
+        // TryParse Method
+        string str2 = "500";
+        int num4 = 0;
+        bool isConversionSuccessful = int.TryParse(str2, out num4);
+        if (isConversionSuccessful)
+        {
+            Console.WriteLine(num4);
+        }
+        else
+        {
+            Console.WriteLine("Please enter a valid number");
+        }
     }
 }

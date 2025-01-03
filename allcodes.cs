@@ -90,3 +90,59 @@ Steps:
 //         Console.WriteLine(myText);
 //     }
 // }
+
+
+/* Assignment-02
+ Name: Apple Iphone 15 Pro Max
+ Price: $1500.50
+ Category: Mobile Phone
+ Available: True
+ Sold: 5
+ */
+// using System;
+// class Test
+// {
+//     public static void Main(String[] args)
+//     {
+//         string deviceName = "Apple Iphone 15 Pro Max";
+//         double price = 1500.50;
+//         string category = "Mobile Phone";
+//         bool available = true;
+//         int sold = 5;
+
+//         Console.WriteLine("Name: " + deviceName);
+//         Console.WriteLine("Price: $" + price);
+//         Console.WriteLine("Category: " + category);
+//         Console.WriteLine("Available: " + available);
+//         Console.WriteLine("Sold: " + sold);
+//     }
+// }
+
+/* 
+    Const and Multiple Variables
+    - const is used to declare a constant variable
+    - const always has to be initialized at the time of declaration
+    - Multiple variables can be declared in a single line. For example: int x = 5, y = 6, z = 50; int a = b = c = 10;
+ */
+// using System;
+// class Variables
+// {
+//     public static void Main(string[] args)
+//     {
+//         const string productName = "Apple Iphone 15 Pro Max";
+//         const double productPrice = 1500.50;
+
+//         Console.WriteLine("Product Name: " + productName);
+//         Console.WriteLine("Product Price: $" + productPrice);
+
+//         int x = 5, y = 6, z = 50;
+//         int a, b, c;
+//         a = b = c = 10;
+//         Console.WriteLine(x);
+//         Console.WriteLine(y);
+//         Console.WriteLine(z);
+//         Console.WriteLine(a);
+//         Console.WriteLine(b);
+//         Console.WriteLine(c);
+//     }
+// }
